@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You - Barangay Gubat</title>
+    <style>
+        body{
+            background-image: url('homepage_1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 10px;
+            background-color: lightblue;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        nav a{
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover{
+            background-color: #d5eaff;
+        }
+
+        .content-box{
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            margin: 100px auto;
+            width: 50%;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        input[type="button"]{
+            padding: 10px 20px;
+            border: none;
+            background-color: #003366;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover{
+            background-color: #0055aa;
+        }
+
+        footer{
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            width: 100%;
+            font-size: 13px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer a{
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="content-box">
+        <h2>Thank You for Registering!</h2>
+        <p>Your registration has been submitted successfully.</p>
+        <p>We will get in touch with you soon via your provided contact details.</p>
+        <br>
+        <a href="index.html">
+            <input type="button" value="Go Back to Home">
+        </a>
+    </div>
+
+    <footer>
+        © 2025 Barangay Gubat | All Rights Reserved | 
+        <a href="#">Email Us</a> | 
+        <a href="#">Facebook</a> | 
+        <a href="#">Twitter</a>
+    </footer>
+
+</body>
+</html>
