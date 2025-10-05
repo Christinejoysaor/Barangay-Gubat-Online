@@ -1,97 +1,222 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Barangay Gubat</title>
+    <title>Welcome to Barangay Gubat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body{
+        body {
             background-image: url('homepage_1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333; 
         }
 
-        nav{
+        header {
+            background-color: rgba(10, 110, 63, 0.7); 
+            color: #F4F4F4;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #F4F4F4;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 8px 15px;
+            margin-left: 20px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 4px;
+        }
+
+
+        nav a[href="index.html"] {
+             color: #0A6E3F;
+             background-color: #FFD700;
+        }
+
+        nav a:hover {
+            color: #0A6E3F;
+            background-color: #FFD700;
+        }
+        
+        nav a[href="index.html"]:hover {
+            background-color: #ffc400; 
+        }
+
+        .content {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
-            gap: 40px;
-            padding: 10px; /* smaller header */
-            background-color: lightblue; /* light blue header */
-            width: 100%;
-            box-sizing: border-box;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px; 
+            padding-bottom: 60px;
         }
 
-        nav a{
-            color: black;
+        .hero-box {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 50px 70px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            max-width: 900px; 
+            width: 80%;
+        }
+
+        .hero-box h1 {
+            font-size: 54px;
+            margin-bottom: 15px;
+            color: #0A6E3F;
+            border-bottom: 4px solid #FFD700;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .hero-box p {
+            font-size: 22px;
+            margin: 15px 0;
+            color: #000000;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: #FFD700;
+            color: #0A6E3F;
             text-decoration: none;
-            font-size: 14px; /* slightly smaller text */
+            font-size: 18px;
             font-weight: bold;
-            text-transform: uppercase;
-            padding: 6px 12px; 
-            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: 2px solid #FFD700;
         }
 
-        nav a:hover{
-            background-color: #d5eaff;
+        .cta-button:hover {
+            background-color: #0A6E3F;
+            color: #FFD700;
+            border-color: #0A6E3F;
+            transform: translateY(-2px);
         }
 
-        .content{
+        footer {
+            background-color: #0A6E3F;
+            color: #F4F4F4;
             text-align: center;
-            margin: 150px auto;
-            color: black;
-        }
-
-        .content h1{
-            font-size: 32px;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px white;
-        }
-
-        .content p{
-            font-size: 16px;
-            margin: 5px;
-            text-shadow: 1px 1px 2px white;
-        }
-
-        footer{
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 12px 0;
-            position: fixed;
-            bottom: 0;
+            padding: 15px 0;
             width: 100%;
-            font-size: 13px;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
         }
 
-        footer a{
-            color: white;
+        footer a {
+            color: #FFD700;
             text-decoration: none;
-            margin: 0 8px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
         }
 
-        footer a:hover{
+        footer a:hover {
+            color: #F4F4F4;
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            
+            .header-container {
+                flex-direction: column; 
+                padding: 10px 0;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                font-size: 14px; 
+                padding: 5px 10px;
+                margin: 0 5px; 
+            }
+
+            .content {
+                padding-top: 150px; 
+                align-items: flex-start;
+            }
+
+            .hero-box {
+                max-width: 90%; 
+                padding: 30px 20px; 
+                margin-top: 0; 
+                width: 90%;
+            }
+
+            .hero-box h1 {
+                font-size: 34px; 
+            }
+
+            .hero-box p {
+                font-size: 18px; 
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+        <div class="header-container">
+            <div class="logo">Barangay Gubat</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
 
     <div class="content">
-        <h1>Welcome to Barangay Gubat!</h1>
-        <p>Where trees and plants are alive. Where Community and Nature Thrive Together.</p>
-        <p>Gubat Lagonoy, Camarines Sur</p>
+        <div class="hero-box">
+            <h1>Welcome to Barangay Gubat!</h1>
+            <p>Where Community and Nature Thrive Together.</p>
+            <p>Gubat Lagonoy, Camarines Sur</p>
+            <a href="about.html" class="cta-button">Learn More About Us</a>
+        </div>
     </div>
 
     <footer>
-        © 2025 Barangay Gubat | All Rights Reserved | 
+        © 2025 Barangay Gubat | All Rights Reserved 
+        <br>
         <a href="#">Email Us</a> | 
         <a href="#">Facebook</a> | 
         <a href="#">Twitter</a>
